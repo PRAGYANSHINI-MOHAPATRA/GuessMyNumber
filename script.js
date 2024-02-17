@@ -47,19 +47,19 @@ function checkGuessNumber() {
         }
       }
 }
-let reset = 0;
-resetButton.addEventListener('click', resetGame);
-function resetGame() {
-    //window.location.reload();
-    body.style.backgroundColor = "black";
-    scoreElement.textContent = 20;
-    highScoreElement.textContent = 0;
-    messageText.textContent = "Start guessing...";
-    number.textContent = "?";
-    guessElement.value = "";
-    randomNumber = Math.trunc(Math.random() * 20) + 1;
-    console.log("random number", randomNumber);
-}
+// let reset = 0;
+// resetButton.addEventListener('click', resetGame);
+// function resetGame() {
+//     //window.location.reload();
+//     body.style.backgroundColor = "black";
+//     scoreElement.textContent = 20;
+//     highScoreElement.textContent = 0;
+//     messageText.textContent = "Start guessing...";
+//     number.textContent = "?";
+//     guessElement.value = "";
+//     randomNumber = Math.trunc(Math.random() * 20) + 1;
+//     console.log("random number", randomNumber);
+// }
 const newElement = document.createElement("div");
 newElement.textContent= "learning dom";
 const mainElement = document.querySelector("main");
