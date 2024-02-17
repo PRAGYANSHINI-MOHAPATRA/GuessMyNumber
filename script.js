@@ -31,21 +31,22 @@ function checkGuessNumber() {
         highScoreElement.textContent = scores;
          number.textContent = randomNumber;
          body.style.backgroundColor = "green";
-    } else{
+   } else{
         const difference = Math.abs(userValue - randomNumber);
       if(difference < 2) {
         messageText.textContent = "Very close! Try again.";
-        } else if (userValue > randomNumber) {
-            scores--;
-          scoreElement.textContent = scores;
+       } 
+        else if (userValue < randomNumber) {
           scores--; // scores = scores -1;
-        scoreElement.textContent = scores;
-            messageText.textContent = "Oops! Gussed Too high. Try again.";
-        } else {
+          scoreElement.textContent = scores;
             messageText.textContent = "Oops! Gussed Too low. Try again.";
+        } else {
+          scores--;
+          scoreElement.textContent = scores;
+            messageText.textContent = "Oops! Gussed Too high. Try again.";
         }
       }
-    }
+}
 let reset = 0;
 resetButton.addEventListener('click', resetGame);
 function resetGame() {
